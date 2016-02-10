@@ -5,7 +5,7 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.12.0/vis.min.js"></script>
 
-	<body>
+	<body style="background-color:#F2F2F2">
 		<div id="graph">
 		</div>
 		<script type="text/javascript">
@@ -26,7 +26,7 @@
 					edges:{
 						scaling:{
 							min: 1,
-							max: 8,
+							max: 5,
 							label:{
 								min:12,
 								max:24
@@ -53,17 +53,15 @@
 				dataset.edges = dataset.edges.map(function(e){
 					if (e.value==1) {
 						e.color = { color: '#CECECE'}
-						e.length = 100;
 					}
 					else if (e.value==5){
 						e.color = { color: '#BAAAAA'}
-						e.length = 150;
 					}
-					else if (e.value>=100){
+					else if (e.value>=25){
 						e.color = { color: '#BB2200'}
-						e.length = 500;
-						e.arrows.scaleFactor = 1.2;
 					}
+
+					e.length = 300;
 					return e;
 				})
 
