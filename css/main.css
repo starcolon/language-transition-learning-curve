@@ -1,0 +1,36 @@
+#legend
+{
+	position: fixed;
+	display: block;
+	float:left;
+	left:10%;
+	top:15%;
+	margin: auto 0;
+	border:1px solid #9C9C9C;
+	padding: 20px;
+}
+
+#legend ul
+{
+	font-family: sans-serif;
+}
+
+#legend ul li:nth-child(1)
+{
+	color: #CECECE;
+}
+
+#legend ul li:nth-child(2)
+{
+	color: #BAAAAA;
+}
+
+#legend ul li:nth-child(3)
+{
+	color: blue;
+}
+
+#legend ul li:nth-child(4)
+{
+	color: #BB2200;
+}

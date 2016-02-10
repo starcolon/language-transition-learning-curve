@@ -4,9 +4,18 @@
 	<meta charset="UTF-8">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.12.0/vis.min.js"></script>
-
+	<link type="text/css" rel="stylesheet" href="css/main.css"/>
 	<body style="background-color:#F2F2F2">
 		<div id="graph">
+		</div>
+		<div id="legend">
+			Transition Difficulty
+			<ul>
+				<li>Easy</li>
+				<li>Kinda comfortable</li>
+				<li>Needs some work</li>
+				<li>Bleeding hard</li>
+			</ul>
 		</div>
 		<script type="text/javascript">
 			function render(dataset){
@@ -51,6 +60,7 @@
 
 				// Highlight shades of edges
 				dataset.edges = dataset.edges.map(function(e){
+					e.length = 300;
 					if (e.value==1) {
 						e.color = { color: '#CECECE'}
 					}
@@ -59,9 +69,9 @@
 					}
 					else if (e.value>=25){
 						e.color = { color: '#BB2200'}
+						e.length = 420;
 					}
-
-					e.length = 300;
+					
 					return e;
 				})
 
