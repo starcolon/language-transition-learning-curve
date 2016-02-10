@@ -2,10 +2,42 @@
 	<title>Transition from language to language - how hard?</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
 	<meta charset="UTF-8">
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.12.0/vis.min.js"></script>
+
 	<body>
-		<div>
+		<div id="graph">
 		</div>
+		<script type="text/javascript">
+			function render(dataset){
+				var container = document.getElementById('graph');
+				var options = {
+					nodes:{
+						shape: 'dot'
+					},
+					edges:{
+						scaling:{
+							min: 1,
+							max: 8,
+							label:{
+								min:12,
+								max:24
+							}
+						}
+					},
+					interaction:{
+						hover: true
+					},
+					physics:{
+						stabilization:{
+							fit: true
+						}
+					}
+				}
+				var g = new vis.Network(container, dataset, options);
+			}
+
+			$.getJSON('data/language-transitions.json', render);
+		</script>
 	</body>
 </html>
