@@ -34,6 +34,14 @@
 						}
 					}
 				}
+
+				// Attach icons
+				dataset.nodes = dataset.nodes.map(function(n){
+					n.image = 'images/' + n.label + '-icon.png';
+					n.shape = 'image';
+					return n;
+				})
+
 				var g = new vis.Network(container, dataset, options);
 			}
 
