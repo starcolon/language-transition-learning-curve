@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":1, "value":1, "label": "C"},
+		{"id":2, "value":1, "label": "C++"},
+		{"id":3, "value":1, "label": "C#"},
+		{"id":4, "value":1, "label": "Java"},
+		{"id":5, "value":1, "label": "JavaScript"},
+		{"id":6, "value":1, "label": "Python"},
+		{"id":7, "value":1, "label": "Ruby"},
+		{"id":8, "value":1, "label": "Prolog"},
+		{"id":9, "value":1, "label": "Haskell"},
+		{"id":10, "value":1, "label": "Scala"}
+	],
+	"edges":[]
+}
